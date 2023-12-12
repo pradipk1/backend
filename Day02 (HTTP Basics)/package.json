@@ -1,0 +1,12 @@
+{
+  "name": "day02-(http-basics)",
+  "version": "1.0.0",
+  "description": "* Anything which we see on the browser, it is called Client side and something which is operated remotely is called Server side.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
