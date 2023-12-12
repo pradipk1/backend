@@ -1,6 +1,6 @@
 # Introduction to Nodejs
 
-* Nodejs is JS run tint engine created by Ryan Dahl using Chrome V8 engine.
+* Nodejs is a JS run time engine created by Ryan Dahl using Chrome V8 engine.
 * Before Nodejs, The JS code was being executed in the browsers only.
 * All the browsers provide their own run time engine for JS.
 
@@ -10,7 +10,7 @@
 
 * This a global literal(variable) in Nodejs.
 * This is a object in which some information gets stored whenever a new process gets started.
-* Windows operating system whenever we execute a program then it is a process for the Wndows.
+* In Windows operating system whenever we execute a program then it is a process for the Windows.
 
 ## process.argv
 
@@ -40,6 +40,6 @@
 
 
 ## Some pre-defined modules in Nodejs
-* crypto => It is used to do mathmatical operations like generate a random number or UUID etc.
+* crypto => It is used to do mathematical operations like generate a random number or UUID etc.
     Ex => available in day01/index.js
 * fs => It is used to read a file data.

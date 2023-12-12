@@ -3,7 +3,7 @@ const { fibonacci } = require('./math.js');
 const crypto = require('crypto');
 const fs = require('fs');
 
-console.log("Hellow World!");
+console.log("Hello World!");
 
 console.log(fibonacci(4));
 
