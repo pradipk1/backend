@@ -1,0 +1,12 @@
+{
+  "name": "day04-(express-middlewares-and-ecosystem)",
+  "version": "1.0.0",
+  "description": "* If we want to run same logic on every request then we can use Middlewares.\r * Like in Express, we generally use \"app.use()\" middleware to run the some same logic on every request.\r * Inside app.use(), we pass the logic whatever we want to execute on every request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
