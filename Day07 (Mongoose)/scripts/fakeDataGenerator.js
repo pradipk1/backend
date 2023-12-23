@@ -1,7 +1,7 @@
 
 const {faker} = require('@faker-js/faker');
-const connectDatabase = require('./Database/connectDatabase');
-const {Employee} = require('./Database/Employee');
+const connectDatabase = require('../Database/connectDatabase');
+const {Employee} = require('../Database/Employee');
 const crypto = require('crypto');
 
 

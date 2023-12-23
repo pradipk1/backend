@@ -1,11 +1,12 @@
 
 ## Mongoose
 
-* It is a library used to connect the MongoDB database to the Nodejs.
+* It is a library used to connect the MongoDB database and the Nodejs.
     * Ex => available in day07/test.js
 
 * We can also create Model/Schema/Blueprint of the DB collection using "mongoose.model()".
     * Ex => available in day07/test.js
+
 #### mongoose.model()
 * It is used create a schema/model for a DB collection.
 * It takes two arguments, 1st is a string in which we pass the collection name like "Student" for the "students" collection, "User" for the "users" collection etc. 2nd argument takes an object in which we define all the fields and its data types.

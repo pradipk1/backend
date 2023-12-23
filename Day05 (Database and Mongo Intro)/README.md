@@ -105,3 +105,7 @@ First switch to the db in which you want to do CRUD operation.
 
 * Using the above command we can delete the data present inside the collection.
 * Ex => db.students.deleteOne({id: ObjectId('')})
+
+### db.collection-name.count()
+
+* It gives the length of the collection.
