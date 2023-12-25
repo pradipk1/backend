@@ -25,8 +25,18 @@ const router = express.Router();
 
 // Below method is used with pagination
 router.get('/employees', async (req, res) => {
+
+    // Below method is basic pagination method
+    // const { skip = 0, limit = 20} = req.query;
+
+
+    // Below method is advance pagination method
+    const { page = 1, pageSize = 20 } = req.query;
+    let limit = Number(pageSize);
+    let skip = Number(pageSize) * (Number(page) - 1);
+    
     try {
-        const employees = await getAllEmployees({ skip: 0, limit: 20});
+        const employees = await getAllEmployees({ skip, limit });
 
         return res.send({
             data: employees
