@@ -46,3 +46,8 @@ Below are mentioned some routes to implement authentication
     * Only server knows how to prepare this token.
     * Server has a method to identify whenever the token is tampered(changed) with it
     * There is no need of the extra storage to maintain information
+    * To implement token based authentication we can use "jsonwebtoken" library.
+    * Ex => available in day09/token.js
+    * Token contains mainly 3 components in encoded form, 1st one contains information about header in which algorithm and type of token like JWT(json web token) is saved, 2nd contains information about the payload(data) for which the token has been generated and 3rd one contains information about "signature" in which we can add some secret message.
+    * Syntax of the token looks like "[1st component].[2nd component].[3rd component]"
+    * Ex => jheiujiriuwe89.i8ur89uuwgygj.eoi9ewiuuywy
