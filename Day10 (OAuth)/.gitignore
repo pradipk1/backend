@@ -2,5 +2,8 @@
 # Below '*' means it will find all the env file whether it is present inside day10 or outside day10 and will put it inside .gitignore file
 *.env
 
+*/node_modules
+*/package-lock.json
+
 /node_modules
 /package-lock.json
