@@ -11,16 +11,16 @@
 
 Below are mentioned some routes to implement authentication
 
-1. GET /user/loggedInUser => Server checks Whether user is logged in?
+1. GET  /auth/loggedInUser => Server checks Whether user is logged in?
     * `token` => if this token is valid => Server will give user details
     * `token` => if this is invalid => Server will give error message
     * if no token is present then Server will say not logged in
 
-2. POST /user/login => Client & Server take care of authenticaion, user does not have to login again to make API calls
+2. POST  /auth/login => Client & Server take care of authenticaion, user does not have to login again to make API calls
     * Server will provide a token and client will store the token in browser storage like local storage etc.
     * For every API request the Client need to send the token in header to the Server
 
-3. POST /user/register
+3. POST  /auth/register
 
 
 ## Authorization

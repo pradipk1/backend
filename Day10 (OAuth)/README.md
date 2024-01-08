@@ -71,7 +71,7 @@
     * Ex => available in day10/client/src/app.js
 
 10. Start the React app using "npm start" command. Now Click on "Login with Github" and it will redirect to github authorization page for the very first time.
-11. Click on "Authorize" and it will redirect to the given callback URL during the registration of the application. It will also include an "access code" i.e a temporary code which is valid for 10 minutes for the exchange of "access token".
+11. On the github authorization page, click on "Authorize" and it will redirect to the given callback URL during the registration of the application. It also adds an "access code" i.e a temporary code at the end of the URL which is valid for 10 minutes for the exchange of "access token".
 12. Now if we click on "Login with Github" then it will not redirect to the github authorization page but it will just redirect to the callback URL with a new "access code".
 13. Make a post request using the URL "https://github.com/login/oauth/access_token" which takes atleast 3 required params, 1st is "client_id", 2nd is "client_secret", 3rd is "code" i.e access code. In response this will give you an access token. Before making request inside header we can add the value of "accept" as application/json to get the response in json format. This "access token" has a longer expiry than "access code" which was of 10 minutes. This access token is used to get the user's details.
 14. Make a get request using URL "https://api.github.com/user". Before making the request put the access token inside Auth/Bearer if you are using thunder client to get the user's details. It will give user's data in json format.
