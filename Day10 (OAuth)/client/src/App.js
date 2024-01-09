@@ -1,12 +1,45 @@
-
 import './App.css';
+import { Routes, Route, BrowserRouter as Router, Outlet } from "react-router-dom";
+import Layout from './components/Layout';
+import { AuthContextProvider } from './contexts/auth';
+import Login from './components/Auth/Login';
+import GithubSignin from './components/Pages/GithubSignin';
+import { ToastContainer } from 'react-toastify';
+import Blogs from './components/Pages/Blogs';
+import Blog from './components/Pages/Blog';
+import BlogForm from './components/Pages/BlogForm';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  return (
-    <div className="App">
-      <a href="https://github.com/login/oauth/authorize?client_id=9b6d0d390f7258cefd75">Login with Github</a>
-    </div>
+  return (<>
+    <ToastContainer />
+    <AuthContextProvider>
+      <Router>
+        <div className="App">
+          <Login />
+          <Layout>
+            <Routes>
+              <Route path="/" element={<DummyLayout />}>
+                <Route index element={<Blogs />} />
+                <Route path='create' element={<BlogForm />} />
+                <Route path='blog/:id' element={<Blog />} />
+                <Route path='github-signin' element={<GithubSignin />} />
+              </Route>
+
+            </Routes>
+          </Layout>
+        </div>
+      </Router>
+    </AuthContextProvider>
+    </>
   );
 }
 
+function DummyLayout() {
+  return (
+    <div>
+      <Outlet />
+    </div>
+  );
+}
 export default App;
