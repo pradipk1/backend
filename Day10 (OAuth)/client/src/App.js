@@ -20,9 +20,9 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/" element={<DummyLayout />}>
-                <Route index element={<Blogs />} />
+                {/* <Route index element={<Blogs />} />
                 <Route path='create' element={<BlogForm />} />
-                <Route path='blog/:id' element={<Blog />} />
+                <Route path='blog/:id' element={<Blog />} /> */}
                 <Route path='github-signin' element={<GithubSignin />} />
               </Route>
 
