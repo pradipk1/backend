@@ -15,7 +15,8 @@ export default function GithubSignin() {
     if (code) {
       loginWithGithubApi(code)
       .then((response) => {
-        const token = response.data.data.token;
+        console.log(response);
+        const token = response.data.token;
 
         localStorage.setItem("auth-token", token);
 

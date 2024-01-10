@@ -100,11 +100,12 @@ async function signinWithGithub(req, res) {
     try {
         
         const code = req.params.code;
+        console.log(code);
 
         // exchange the code with access token
         const url = 'https://github.com/login/oauth/access_token';
 
-        const response = await axios.post(url, {
+        let response = await axios.post(url, null, {
             params: {
                 client_id: config.GITHUB_OAUTH_CLIENT_ID,
                 client_secret: config.GITHUB_OAUTH_CLIENT_SECRET,
@@ -131,9 +132,12 @@ async function signinWithGithub(req, res) {
             signinMethod: 'github-oauth',
             githubUsername: user.login
         });
+        console.log(existingUser);
+        
 
-        if(!existingUser) {
-            existingUser = await User.create({
+        // first time user is signing in with github
+        if(existingUser.length === 0) {
+            existingUser[0] = await User.create({
                 name: user.name,
                 email: user.email,
                 image: user.avatar_url,
@@ -141,18 +145,19 @@ async function signinWithGithub(req, res) {
                 githubUsername: user.login
             });
         }
+        
 
         // create JWT token
-        const token = generateToken(existingUser);
-        const { _id, name, image, email } = existingUser;
+        const token = generateToken(existingUser[0]);
+        const { _id, name, image, email } = existingUser[0];
 
         return res.send({
-            message: 'Login with github successfully',
+            message: 'Login with github successfull',
             token,
             user: {
                 _id, name, email, image
             }
-        })
+        });
         
     } catch (err) {
         return res.status(500).send({
