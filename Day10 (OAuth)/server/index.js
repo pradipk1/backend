@@ -5,7 +5,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 
-const connectDatabase = require('./Database/connectDatabase');
+const connectDatabase = require('./database/connectDatabase');
 const authRouter = require('./routes/auth');
 const postRouter = require('./routes/post');
 
@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use(morgan('tiny'));
+app.use(morgan('tiny')); 
 
 // function logRequest(req, res, next) {
 //     console.log(new Date(), req.method, req.url);
